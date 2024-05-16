@@ -17,16 +17,11 @@ namespace MyParticleSys
         [SerializeField] static Vector3 pos;
         private void Start()
         {
-            
-        }
-
-        private void Update()
-        {
 
             for (int i = 0; i < cantParticles; i++)
             {
                 frame += Time.deltaTime;
-                GameObject tmp =  Instantiate(Prefabs);
+                GameObject tmp = Instantiate(Prefabs);
                 listParticles.Add(tmp);
                 if (frame < tiempoAper)
                 {
@@ -34,6 +29,11 @@ namespace MyParticleSys
                     frame = 0;
                 }
             }
+        }
+
+        private void Update()
+        {
+
 
         }
     }
