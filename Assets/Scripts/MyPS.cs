@@ -9,7 +9,7 @@ namespace MyParticleSys
         [Header("Atributes Static")]
         [SerializeField] public int cantParticles=50;
         [SerializeField] public float tiempoAper = 0.6f;
-        [SerializeField] public float frame = 0.6f;
+        [SerializeField] public float frame = 0;
         [SerializeField] public GameObject Prefabs;        
         [SerializeField] public List<GameObject> listParticles;
         [Header("Atributes Dinamic")]
@@ -31,6 +31,7 @@ namespace MyParticleSys
                 if (frame < tiempoAper)
                 {
                     tmp.SetActive(false);
+                    frame = 0;
                 }
             }
 
